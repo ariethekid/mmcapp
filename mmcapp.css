@@ -120,7 +120,7 @@ div.sectionTitle
 	height:200px;
 	background-repeat:no-repeat;
 	background-size:100%;
-	background-position:0px -100px;
+	background-position:0px;
 }
 div.color
 {
@@ -157,7 +157,7 @@ header {
 	background-image:url(images/images.jpg);
 	background-repeat:no-repeat;
 	background-size:100%;
-	background-position:0px -100px;
+	background-position:0px;
 }
 
 header h1#logo {
