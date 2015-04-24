@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Meharry App Test</title>
+<link href="mmcapp.css" rel="stylesheet" type="text/css">
+<script src="js/classie.js"></script>
+<script>
+    function init() {
+        window.addEventListener('scroll', function(e){
+            var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+                shrinkOn = 300,
+                header = document.querySelector("header");
+            if (distanceY > shrinkOn) {
+                classie.add(header,"smaller");
+            } else {
+                if (classie.has(header,"smaller")) {
+                    classie.remove(header,"smaller");
+                }
+            }
+        });
+    }
+    window.onload = init();
+</script>
+</head>
+
+<body>
+<div id="wrapper">
+        <header>
+        
+            <!--<div class="color">
+            </div>
+            <div id="aTitle">
+                <h1 class="headerWhite">Title of the Article goes here</h1>
+            </div>
+                
+            <div id="newslabel">
+                <h1 class="headerMaroon">NEWS</h1>
+            </div>-->
+            <div class="headerColor" style="background-color:#9E005D;" ></div> 
+            <div class="container clearfix">
+            <h1 id="logo">
+                    MEHARRY
+             </h1>
+             <a href="#news">
+                <h1 id="featureArticle" align="left">'Student created Meharry App spreads like wildfire'
+                </h1>
+                <input class="newsTop" type="button" value="NEWS"/>              
+                <img class="picLogo" src="images/mmclogo-01.png" /></a>
+ 
+            </div>
+                
+                
+                
+        </header>
+<div id="main">
+
+		<nav>
+        	<div class="navSection">
+            <a href="#calendar"><h1 class="articleTitle">'What's happening around campus?'</h1>
+            <input type="button" value="CALENDAR" style="background-color:#29ABE2" />
+            <h6 class="updated">Updated: April 23, 2015 &#183; A. Marshall </h6>
+            <p>&#183;&#183;&#183;</p></a>
+            </div>
+            
+            <div class="navSection">
+            <a href="#maps"><h1 class="articleTitle">'Finding your way around Meharry'</h1>
+            <input type="button" value="MAPS" style="background-color:#22B573" />
+            <h6 class="updated">Updated: April 23, 2015 &#183; A. Marshall </h6>
+            <p>&#183;&#183;&#183;</p></a>
+            </div>
+            
+            <div class="navSection">
+            <a href="#directory"><h1 class="articleTitle">'Search Meharry's Directory'</h1>
+            <input type="button" value="DIRECTORY" style="background-color:#93278F" />
+            <h6 class="updated">Updated: April 23, 2015 &#183; A. Marshall </h6>
+            <p>&#183;&#183;&#183;</p></a>
+            </div>
+            
+            <div class="navSection">
+            <a href="#alumni"><h1 class="articleTitle">'Alumni Corner'</h1>
+            <input type="button" value="ALUMNI" style="background-color:#FCEE21"/>
+            <h6 class="updated">Updated: April 23, 2015 &#183; A. Marshall </h6>
+            <p>&#183;&#183;&#183;</p></a>
+            </div>
+            
+            <div class="navSection">
+            <a href="#"><h1 class="articleTitle">'Finding your way around Meharry'</h1>
+            <input type="button" value="NASHVILLE GUIDE"/>
+            <h6 class="updated">Updated: April 23, 2015 &#183; A. Marshall </h6>
+            <p>&#183;&#183;&#183;</p></a>
+            </div>
+            
+            
+        </nav>
+
+
+        <div id="content">
+        
+        <section>
+            	<div id="news" class="sectionTitle" style="background-image:url(images/pulsecoatbanner.jpg);">
+                	<div class="color" style="background-color:#9E005D;">
+                	</div>
+                    <div class="colorText">
+                    	<h1 align="center">News</h1>
+                    </div>    
+                </div>
+            	<div class="container">
+                	<h1>Content Will go here</h1>
+                    <p>Cupcake ipsum dolor sit amet lollipop. Macaroon candy cotton candy bear claw macaroon carrot cake pastry icing dessert. Cupcake pastry tart sesame snaps lollipop donut pie. Cookie apple pie toffee lemon drops jelly beans cheesecake sweet roll. Jelly-o soufflé donut candy canes wafer dragée sweet cheesecake. Macaroon caramels pie cookie gummi bears. Ice cream jelly-o toffee cookie gingerbread cookie. Soufflé fruitcake jelly-o jelly chupa chups jelly beans. Dragée marzipan pastry macaroon oat cake muffin soufflé topping liquorice. Jelly-o chocolate cake lollipop. </p>
+<p>
+Sugar plum muffin cookie pastry oat cake icing candy canes chocolate. Gummi bears chupa chups fruitcake dessert jelly. Muffin cookie ice cream soufflé pastry lollipop gingerbread sweet. Unerdwear.com bonbon candy marzipan bonbon gummies chocolate cake gummi bears powder. Unerdwear.com tart halvah chocolate cake dragée liquorice. Sugar plum chocolate bar pastry liquorice dragée jelly powder. Jelly tootsie roll applicake caramels. Marzipan candy tootsie roll donut. Gummies ice cream macaroon applicake.</p>
+                </div>
+            </section>
+        
+            <section id="maps">
+            	<div class="sectionTitle" style="background-image:url(images/maps.jpg);">
+                	<div class="color" style="background-color:#22B573;">
+                	</div>
+                    <div class="colorText">
+                    	<h1 align="center">Maps</h1>
+                    </div>    
+                </div>
+            	<div class="container">
+                	<h1>Content Will go here</h1>
+                    <p>Cupcake ipsum dolor sit amet lollipop. Macaroon candy cotton candy bear claw macaroon carrot cake pastry icing dessert. Cupcake pastry tart sesame snaps lollipop donut pie. Cookie apple pie toffee lemon drops jelly beans cheesecake sweet roll. Jelly-o soufflé donut candy canes wafer dragée sweet cheesecake. Macaroon caramels pie cookie gummi bears. Ice cream jelly-o toffee cookie gingerbread cookie. Soufflé fruitcake jelly-o jelly chupa chups jelly beans. Dragée marzipan pastry macaroon oat cake muffin soufflé topping liquorice. Jelly-o chocolate cake lollipop. </p>
+<p>
+Sugar plum muffin cookie pastry oat cake icing candy canes chocolate. Gummi bears chupa chups fruitcake dessert jelly. Muffin cookie ice cream soufflé pastry lollipop gingerbread sweet. Unerdwear.com bonbon candy marzipan bonbon gummies chocolate cake gummi bears powder. Unerdwear.com tart halvah chocolate cake dragée liquorice. Sugar plum chocolate bar pastry liquorice dragée jelly powder. Jelly tootsie roll applicake caramels. Marzipan candy tootsie roll donut. Gummies ice cream macaroon applicake.</p>
+                </div>
+            </section>
+            
+            <section id="calendar">
+            	<div class="sectionTitle" style="background-image:url(images/header-academic-calendar-ss-59653657-788x360.jpg);">
+                	<div class="color" style="background-color:#29ABE2;">
+                	</div>
+                    <div class="colorText">
+                    	<h1 align="center">Calendar</h1>
+                    </div>    
+                </div>
+            	<div class="container">
+                	<h1>Content Will go here</h1>
+                    <p>Cupcake ipsum dolor sit amet lollipop. Macaroon candy cotton candy bear claw macaroon carrot cake pastry icing dessert. Cupcake pastry tart sesame snaps lollipop donut pie. Cookie apple pie toffee lemon drops jelly beans cheesecake sweet roll. Jelly-o soufflé donut candy canes wafer dragée sweet cheesecake. Macaroon caramels pie cookie gummi bears. Ice cream jelly-o toffee cookie gingerbread cookie. Soufflé fruitcake jelly-o jelly chupa chups jelly beans. Dragée marzipan pastry macaroon oat cake muffin soufflé topping liquorice. Jelly-o chocolate cake lollipop. </p>
+<p>
+Sugar plum muffin cookie pastry oat cake icing candy canes chocolate. Gummi bears chupa chups fruitcake dessert jelly. Muffin cookie ice cream soufflé pastry lollipop gingerbread sweet. Unerdwear.com bonbon candy marzipan bonbon gummies chocolate cake gummi bears powder. Unerdwear.com tart halvah chocolate cake dragée liquorice. Sugar plum chocolate bar pastry liquorice dragée jelly powder. Jelly tootsie roll applicake caramels. Marzipan candy tootsie roll donut. Gummies ice cream macaroon applicake.</p>
+                </div>
+            </section>
+            
+            <section id="directory">
+            	<div class="sectionTitle" style="background-image:url(images/header-academic-calendar-ss-59653657-788x360.jpg);">
+                	<div class="color" style="background-color:#93278F;">
+                	</div>
+                    <div class="colorText">
+                    	<h1 align="center">Directory</h1>
+                    </div>    
+                </div>
+            	<div class="container">
+                	<h1>Content Will go here</h1>
+                    <p>Cupcake ipsum dolor sit amet lollipop. Macaroon candy cotton candy bear claw macaroon carrot cake pastry icing dessert. Cupcake pastry tart sesame snaps lollipop donut pie. Cookie apple pie toffee lemon drops jelly beans cheesecake sweet roll. Jelly-o soufflé donut candy canes wafer dragée sweet cheesecake. Macaroon caramels pie cookie gummi bears. Ice cream jelly-o toffee cookie gingerbread cookie. Soufflé fruitcake jelly-o jelly chupa chups jelly beans. Dragée marzipan pastry macaroon oat cake muffin soufflé topping liquorice. Jelly-o chocolate cake lollipop. </p>
+<p>
+Sugar plum muffin cookie pastry oat cake icing candy canes chocolate. Gummi bears chupa chups fruitcake dessert jelly. Muffin cookie ice cream soufflé pastry lollipop gingerbread sweet. Unerdwear.com bonbon candy marzipan bonbon gummies chocolate cake gummi bears powder. Unerdwear.com tart halvah chocolate cake dragée liquorice. Sugar plum chocolate bar pastry liquorice dragée jelly powder. Jelly tootsie roll applicake caramels. Marzipan candy tootsie roll donut. Gummies ice cream macaroon applicake.</p>
+                </div>
+            </section>
+            
+            <section id="alumni">
+            	<div class="sectionTitle" style="background-image:url(images/DSC05904.jpg);">
+                	<div class="color" style="background-color:#FCEE21;">
+                	</div>
+                    <div class="colorText">
+                    	<h1 align="center">Alumni</h1>
+                    </div>    
+                </div>
+            	<div class="container">
+                	<h1>Content Will go here</h1>
+                    <p>Cupcake ipsum dolor sit amet lollipop. Macaroon candy cotton candy bear claw macaroon carrot cake pastry icing dessert. Cupcake pastry tart sesame snaps lollipop donut pie. Cookie apple pie toffee lemon drops jelly beans cheesecake sweet roll. Jelly-o soufflé donut candy canes wafer dragée sweet cheesecake. Macaroon caramels pie cookie gummi bears. Ice cream jelly-o toffee cookie gingerbread cookie. Soufflé fruitcake jelly-o jelly chupa chups jelly beans. Dragée marzipan pastry macaroon oat cake muffin soufflé topping liquorice. Jelly-o chocolate cake lollipop. </p>
+<p>
+Sugar plum muffin cookie pastry oat cake icing candy canes chocolate. Gummi bears chupa chups fruitcake dessert jelly. Muffin cookie ice cream soufflé pastry lollipop gingerbread sweet. Unerdwear.com bonbon candy marzipan bonbon gummies chocolate cake gummi bears powder. Unerdwear.com tart halvah chocolate cake dragée liquorice. Sugar plum chocolate bar pastry liquorice dragée jelly powder. Jelly tootsie roll applicake caramels. Marzipan candy tootsie roll donut. Gummies ice cream macaroon applicake.</p>
+                </div>
+            </section>
+            
+        </div><!-- content -->
+</div><!-- main -->       
+        <footer>
+        	brought to you by c/o 2015 and NoC
+        </footer>
+
+</div><!-- wrapper -->
+</body>
+</html>
