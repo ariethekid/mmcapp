@@ -39,7 +39,7 @@ function menuOpen()
 
 function menuClose()
 {
-	$('#menu').css('right','-55%');
+	$('#menu').css('right','-100%');
 }
 </script>
 <script type="text/javascript">
@@ -51,7 +51,7 @@ $(document).ready(function() {
 <!-----SLIDING PANEL DELAY AND HIDE----->
 <script type="text/javascript">
 $(document).ready(function() {
-	$('#menu').css('right','-55%'); <!-- Change 'left' to 'right' for panel to appear to the right -->
+	$('#menu').css('right','-100%'); <!-- Change 'left' to 'right' for panel to appear to the right -->
 });
 </script>
 </head>
@@ -66,8 +66,8 @@ $(document).ready(function() {
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<div id="menu" onMouseOut="menuClose()">
-	<div class="arrow"><</div>
+<div id="menu">
+	<div onClick="menuClose()" class="arrow"><</div>
     <nav class="nav">
         <a href="#">Home</a>
         <a href="#">An introduction: Design in 2012</a>
@@ -80,11 +80,9 @@ $(document).ready(function() {
 </div>
 
 <div id="wrapper">
-        <header>
-            <div class="headerColor" style="background-color:#0097CD;" >
-            	<h1 class="sectionHeader">SOCIAL</h1>
-            </div>        
-                <img id="logo" src="images/mmclogo-01.png" src="./index.html" />
+        <header style="height:50px; background-color:#0097CD;">
+            	<h1 class="sectionHeaderTitle">SOCIAL</h1>      
+                <a href="./index.html"><img id="sectionLogo" src="images/mmclogo-01.png" /></a>
                 <div id="menuButton" onClick="menuOpen()">
                 	<div class="menuButtonDiv"></div>
                     <div class="menuButtonDivB"></div>
@@ -129,7 +127,7 @@ $(document).ready(function() {
             
         </div><!-- content -->
 </div><!-- main -->       
-        <footer class="social">
+        <footer class="footerNav">
         	<nav>
                 <div>
                 	<table width="100%">

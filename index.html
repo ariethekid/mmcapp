@@ -10,7 +10,7 @@
 <script type="text/javascript">
     google.load("feeds", "1");
 	function init() {
-        window.addEventListener('scroll', function(e){
+        /*window.addEventListener('scroll', function(e){
             var distanceY = window.pageYOffset || document.documentElement.scrollTop,
                 shrinkOn = 300,
                 header = document.querySelector("header");
@@ -21,7 +21,7 @@
                     classie.remove(header,"smaller");
                 }
             }
-        });
+        });*/
     }
 	
 	function rssInitialize() {
@@ -55,10 +55,10 @@
 
 <body>
 <div id="wrapper">
-        <header>
+        <header style="background-color:#9E005D; height:120px;" >
         
             <!--<div class="color">
-            </div>
+            </div> 
             <div id="aTitle">
                 <h1 class="headerWhite">Title of the Article goes here</h1>
             </div>
@@ -66,7 +66,6 @@
             <div id="newslabel">
                 <h1 class="headerMaroon">NEWS</h1>
             </div>-->
-            <div class="headerColor" style="background-color:#9E005D;" ></div> 
             <div class="container clearfix">
             <img id="logo" src="images/mmclogo-01.png" />
              <a href="#news">

@@ -14,8 +14,8 @@
 }
 #subMain {
   background-color: #fff;
-  padding-top: 120px;
-  padding-bottom:100px;
+  padding-top: 60px;
+  padding-bottom:60px;
 }
   
 .container {
@@ -27,7 +27,8 @@ padding: 0 20px; }
 width: 80%;
 margin: 0 auto;
 padding: 0 20px;
-text-align:center; }
+text-align:center; 
+}
 
 div.navSection
 {
@@ -92,7 +93,6 @@ div.colorText
 }
 header {
     width: 100%;
-    height: 120px;
     overflow: hidden;
     position: fixed;
     top: 0;
@@ -126,10 +126,29 @@ header #logo {
     -o-transition: all 0.3s;
     transition: all 0.3s;
 }
+
+header #sectionLogo {
+	position:absolute;
+	top:-8px;
+	left:-15px;
+    display: inline-block;
+    height: 70px;
+    float: left;
+    font-family: centuryGothic;
+    font-size: 60px;
+    color:#F1F1F1;
+    font-weight: 400;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
 header #menuButton {
 	position:absolute;
-	top:20px;
-	right:75px;
+	top:10px;
+	right:10px;
     display: inline-block;
     float: left;
     font-family: centuryGothic;
@@ -145,14 +164,14 @@ header .menuButtonDiv
 {
 	border-bottom:3px solid #FFF;
 	border-top:3px solid #FFF;
-	width:70px;
-	padding-bottom:20px;
+	width:20px;
+	padding-bottom:5px;
 }
 header .menuButtonDivB
 {
 	border-bottom:3px solid #FFF;
-	width:70px;
-	padding-bottom:20px;
+	width:20px;
+	padding-bottom:5px;
 }
 
 header h1#featureArticle {
@@ -164,7 +183,7 @@ header h1#featureArticle {
     height: 150px;
     float: left;
     font-family: centuryGothic;
-    font-size: 20px;
+    font-size: 18px;
     color:#F1F1F1;
     font-weight: 400;
     -webkit-transition: all 0.3s;
@@ -179,15 +198,18 @@ header .newsTop
 	top:10px;
 	left:100px;
 }
-header .sectionHeader
+/*controls the section headers */
+
+header .sectionHeaderTitle
 {
 	font-family: centuryGothic;
     font-size: 40px;
     color:#FFFFFF;
     font-weight:bolder;
 	display:inline;
-	letter-spacing: 12px;
+	letter-spacing:7px;
 }
+
 div.headerColor
 {
 	position:relative;
@@ -295,9 +317,9 @@ footer {
 	color:#E1E1E1;
 	font-family:centuryGothic;
 }
-footer.social {
+footer.footerNav {
     width: 100%;
-    height: 100px;
+    height: 50px;
     overflow: hidden;
     position: fixed;
     bottom: 0;
@@ -318,7 +340,7 @@ footer.social {
 #menu {
 	background: #f9f9f9;
 	border-right: 3px solid #fff;
-	width: 50%;
+	width: 75%;
 	padding: 30px;
 	position: fixed;
 	z-index: 100000;
