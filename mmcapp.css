@@ -40,7 +40,7 @@ div.navSection
 div.navSection h1
 {
 	font-family:centuryGothic;
-	font-size:24px;
+	font-size:16px;
 }
 
 div.navSection h2
@@ -157,9 +157,9 @@ header .menuButtonDivB
 
 header h1#featureArticle {
 	position:absolute;
-	top:50px;
+	top:30px;
 	left:100px;
-	width:600px;
+	width:80%;
     display: inline-block;
     height: 150px;
     float: left;
@@ -176,13 +176,13 @@ header h1#featureArticle {
 header .newsTop
 {
 	position:absolute;
-	top:30px;
+	top:10px;
 	left:100px;
 }
 header .sectionHeader
 {
 	font-family: centuryGothic;
-    font-size: 80px;
+    font-size: 40px;
     color:#FFFFFF;
     font-weight:bolder;
 	display:inline;
