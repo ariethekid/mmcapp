@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Meharry App</title>
+<link href="mmcapp.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="js/classie.js"></script>
+<script type="text/javascript">
+    google.load("feeds", "1");
+	function init() {
+        window.addEventListener('scroll', function(e){
+            var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+                shrinkOn = 300,
+                header = document.querySelector("header");
+            if (distanceY > shrinkOn) {
+                classie.add(header,"smaller");
+            } else {
+                if (classie.has(header,"smaller")) {
+                    classie.remove(header,"smaller");
+                }
+            }
+        });
+    }
+	
+	function rssInitialize() {
+        var feed = new google.feeds.Feed('http://pulsemmc.wordpress.com/feed/'); // change the feed url 
+        var rssoutput = ""; //I'm sending this back to the div
+		feed.setResultFormat(google.feeds.Feed.MIXED_FORMAT);
+        feed.setNumEntries(10);
+        feed.load(function(result) {
+        if (!result.error) {
+          var container = document.getElementById("newsContent");
+          for (var i = 0; i < 2; i++) {
+            var entry = result.feed.entries[i];
+            var mediaEntries = entry.xmlNode.getElementsByTagNameNS('*','thumbnail');
+            for (var j = 0; j < mediaEntries.length; j++) {
+                var mediaEntry = mediaEntries[j]; // This is the media:thumbnail item
+                var mediaThumbnailUrl = mediaEntry.attributes.getNamedItem('url').value; // Just the url				
+				rssoutput = entry.title;
+            }
+			$("#featureArticle").html(rssoutput);
+			//container.innerHTML = rssoutput;
+          }
+        }
+      });
+    }
+	
+	
+    window.onload = init();
+	google.setOnLoadCallback(rssInitialize);
+</script>
+</head>
+
+<body>
+<div id="wrapper">
+        <header>
+        
+            <!--<div class="color">
+            </div>
+            <div id="aTitle">
+                <h1 class="headerWhite">Title of the Article goes here</h1>
+            </div>
+                
+            <div id="newslabel">
+                <h1 class="headerMaroon">NEWS</h1>
+            </div>-->
+            <div class="headerColor" style="background-color:#9E005D;" ></div> 
+            <div class="container clearfix">
+            <img id="logo" src="images/mmc-full-01.png" />
+             <a href="#news">
+                <h1 id="featureArticle" align="left">'Student created Meharry App spreads like wildfire'
+                </h1>
+                <input class="newsTop" type="button" value="NEWS"/>              
+                </a>
+ 
+            </div>
+                
+                
+                
+        </header>
+<div id="main">
+
+		<nav>
+        	<div class="navSection">
+            <a href="./social.html"><h1 class="articleTitle">'What's happening around campus?'</h1>
+            <input type="button" value="SOCIAL MEDIA" style="background-color:#0097CD" />
+            </a>
+            </div>
+            
+            <div class="navSection">
+            <a href="http://mmmc.campuswall.com"><h1 class="articleTitle">'Join the Meharry Marketplace'</h1>
+            <input type="button" value="CAMPUSWALL" style="background-color:#29ABE2" />
+            </a>
+            </div>
+        
+        	<div class="navSection">
+            <a href="./news.html"><h1 class="articleTitle">'What's happening around campus?'</h1>
+            <input type="button" value="CALENDAR" style="background-color:#29ABE2" />
+            </a>
+            </div>
+            
+            <div class="navSection">
+            <a href="#maps"><h1 class="articleTitle">'Finding your way around Meharry'</h1>
+            <input type="button" value="MAPS" style="background-color:#22B573" />
+            </a>
+            </div>
+            
+            <div class="navSection">
+            <a href="#directory"><h1 class="articleTitle">'Search Meharry's Directory'</h1>
+            <input type="button" value="DIRECTORY" style="background-color:#93278F" />
+            </a>
+            </div>
+            
+            <div class="navSection">
+            <a href="#alumni"><h1 class="articleTitle">'Alumni Corner'</h1>
+            <input type="button" value="ALUMNI" style="background-color:#FCEE21"/>
+            </a>
+            </div>
+            
+            <div class="navSection">
+            <a href="#"><h1 class="articleTitle">'Finding your way around Meharry'</h1>
+            <input type="button" value="NASHVILLE GUIDE"/>
+            </a>
+            </div>
+            
+            
+        </nav>
+
+
+        <div id="content">
+            <!-- <section id="maps">
+            	<div class="sectionTitle" style="background-image:url(images/maps.jpg);">
+                	<div class="color" style="background-color:#22B573;">
+                	</div>
+                    <div class="colorText">
+                    	<h1 align="center">Maps</h1>
+                    </div>    
+                </div>
+            	<div class="container">
+                	
+                </div>
+            </section>
+            
+            <section id="calendar">
+            	<div class="sectionTitle" style="background-image:url(images/header-academic-calendar-ss-59653657-788x360.jpg);">
+                	<div class="color" style="background-color:#29ABE2;">
+                	</div>
+                    <div class="colorText">
+                    	<h1 align="center">Calendar</h1>
+                    </div>    
+                </div>
+            	<div class="container">
+                	
+                </div>
+            </section>
+            
+            <section id="directory">
+            	<div class="sectionTitle" style="background-image:url(images/header-academic-calendar-ss-59653657-788x360.jpg);">
+                	<div class="color" style="background-color:#93278F;">
+                	</div>
+                    <div class="colorText">
+                    	<h1 align="center">Directory</h1>
+                    </div>    
+                </div>
+            	<div class="container">
+                	
+                </div>
+            </section>
+            
+            <section id="alumni">
+            	<div class="sectionTitle" style="background-image:url(images/DSC05904.jpg);">
+                	<div class="color" style="background-color:#FCEE21;">
+                	</div>
+                    <div class="colorText">
+                    	<h1 align="center">Alumni</h1>
+                    </div>    
+                </div>
+            	<div class="container">
+                </div>
+            </section>-->
+            
+        </div><!-- content -->
+</div><!-- main -->       
+        <footer style="background-color:#9E005D;">
+        	brought to you by c/o 2015 and NoC
+        </footer>
+
+</div><!-- wrapper -->
+</body>
+</html>
