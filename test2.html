@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+    google.load("feeds", "1");
+
+    function initialize() {
+        var feed = new google.feeds.Feed('http://pulsemmc.wordpress.com/feed/'); // change the feed url 
+        var rssoutput = ""; //I'm sending this back to the div
+		feed.setResultFormat(google.feeds.Feed.MIXED_FORMAT);
+        feed.setNumEntries(25);
+        feed.load(function(result) {
+        if (!result.error) {
+          var container = document.getElementById("feed");
+          for (var i = 0; i < result.feed.entries.length; i++) {
+            var entry = result.feed.entries[i];
+            var mediaEntries = entry.xmlNode.getElementsByTagNameNS('*','thumbnail');
+            for (var j = 0; j < mediaEntries.length; j++) {
+                var mediaEntry = mediaEntries[j]; // This is the media:thumbnail item
+                var mediaThumbnailUrl = mediaEntry.attributes.getNamedItem('url').value; // Just the url				
+				rssoutput += "<div class='newsItem'><a href="+entry.link+"><div class='newsItemContent'><h1>"+ entry.title +"</h1><h2>"+ entry.publishedDate +"</h2><h6>"+ entry.author +"</h6><p>"+ entry.content +"</p></div><div class='newsItemContent'><img href="+entry.link+" width='100%' src="+ mediaThumbnailUrl+"></div></a></div>";
+				
+
+                /*var imageElement = document.createElement("img"); this works but...
+                imageElement.setAttribute('src', mediaThumbnailUrl);
+                imageElement.setAttribute('width', '200px');
+                var div = document.createElement("div");
+                div.appendChild(document.createTextNode(entry.title));
+                div.appendChild(imageElement);
+                container.appendChild(div);
+				var div = document.createElement("div");
+				div.setAttribute('class','newsItem');
+				div.appendChild(rssoutput);*/
+            }
+			container.innerHTML = rssoutput;
+          }
+        }
+      });
+    }
+    google.setOnLoadCallback(initialize);
+    </script>
+    </head>
+    <body>
+    
+    	<div id="feed"></div>
+    
+    </body>
+</html>

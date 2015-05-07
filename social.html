@@ -9,17 +9,6 @@
 <script src="js/classie.js"></script>
 
 <script type="text/javascript">
-
-/*$(document).ready(function(){
-    $(".socialNav").click(function() 
-	{ 
-		$("section").hide(); 
-		if ( $(this). )
-		{
-		}
-	});
-});*/
-
 function slide(x)
 { 
 	$("section").hide();
@@ -42,8 +31,28 @@ function slide(x)
 	}
 	
 }
-	
 
+function menuOpen()
+{
+	$('#menu').css('right','0');
+}
+
+function menuClose()
+{
+	$('#menu').css('right','-55%');
+}
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#menu").height($(document).height());
+});
+</script>
+
+<!-----SLIDING PANEL DELAY AND HIDE----->
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#menu').css('right','-55%'); <!-- Change 'left' to 'right' for panel to appear to the right -->
+});
 </script>
 </head>
 
@@ -56,16 +65,30 @@ function slide(x)
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=692788337515000";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+
+<div id="menu" onMouseOut="menuClose()">
+	<div class="arrow"><</div>
+    <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">An introduction: Design in 2012</a>
+        <a href="#">Relevant figures in design</a>
+        <a href="#">Where is design heading?</a>
+        <a href="#">Influences</a>
+        <a href="#">Video</a>
+        <a href="#">Sources</a>
+    </nav>
+</div>
+
 <div id="wrapper">
-        <header class="smaller">
-            <div class="headerColor" style="background-color:#0097CD;" ></div> 
-            <div class="container clearfix">
-            <h1 id="logo">SOCIALMEDIA</h1>
-             
-                <h1 id="featureArticle" align="left"></h1>              
-                <img class="picLogo" src="images/mmclogo-01.png" src="./index.html" />
- 
-            </div>    
+        <header>
+            <div class="headerColor" style="background-color:#0097CD;" >
+            	<h1 class="sectionHeader">SOCIAL</h1>
+            </div>        
+                <img id="logo" src="images/mmclogo-01.png" src="./index.html" />
+                <div id="menuButton" onClick="menuOpen()">
+                	<div class="menuButtonDiv"></div>
+                    <div class="menuButtonDivB"></div>
+                </div>
         </header>
 <div id="subMain">
 

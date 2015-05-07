@@ -10,14 +10,17 @@
 
         <preference name="phonegap-version" value="3.7.0" />
 
-        <name>Sample Config.xml</name>
+        <name>MMC</name>
 
         <description>
         An example for phonegap build docs. 
         </description>
 
-        <author href="http://yoursite.com" email="you@youremail.com">
-        Your Name
+        <author href="http://yoursite.com" email="dr.marshalla@gmail.com">
+        Andrew Marshall
         </author>
+		
+		<icon src="icon.png" />
+		<gap:splash src="splash.png" />
 
     </widget>
