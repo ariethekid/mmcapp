@@ -1,170 +1,45 @@
 <!doctype html>
-<html>
+<html class="ui-mobile">
 <head>
-<meta charset="utf-8">
-<title>MMC Social Media</title>
-<link href="mmcapp.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="js/classie.js"></script>
-
-<script type="text/javascript">
-function slide(x)
-{ 
-	$("section").hide();
-		
-	if (x == 'twitter')
-	{
-		$("#twitter").show();
-	}
-	else if (x == 'fb')
-	{
-		$("#facebook").show();
-	}
-	else if (x == 'instagram')
-	{
-		$("#instagram").show();
-	}
-	else if (x == 'youtube')
-	{
-		$("#youtube").show();
-	}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/jqm-demos.css">
+	<link href="mmcapp.css" rel="stylesheet" type="text/css">
+	<script src="js/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
 	
-}
-
-function menuOpen()
-{
-	$('#menu').css('right','0');
-}
-
-function menuClose()
-{
-	$('#menu').css('right','-100%');
-}
-</script>
-<script type="text/javascript">
-$(document).ready(function() {
-	$("#menu").height($(document).height());
-});
-</script>
-
-<!-----SLIDING PANEL DELAY AND HIDE----->
-<script type="text/javascript">
-$(document).ready(function() {
-	$('#menu').css('right','-100%'); <!-- Change 'left' to 'right' for panel to appear to the right -->
-});
-</script>
 </head>
 
 <body>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=692788337515000";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+<div data-role="page" data-control-title="Social" data-theme="a" id="social">
+		<div data-role="panel" id="panel" data-position="right" data-display="overlay">
+			<ul data-role="listview">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="directory.html">Directory</a></li>
+				<li><a href="about.html">About</a></li>
+			</ul>
+		</div>
+	
+	
+	<div data-role="header">
+       	<div id="custom-border-radius">
+       		<a href=#panel" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-icon-bars ui-btn-icon-notext ui-corner-all"></a>
+       	</div>
+       	
+       	<h1>MMC App</h1>
+    </div>
+    
+    <div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#twitter" class="ui-btn-active">Twitter</a></li>
+				<li><a href="#facebook">Facebook</a></li>
+				<li><a href="#instagram">Instagram</a></li>
+	    	</ul>
+    </div>
 
-<div id="menu">
-	<div onClick="menuClose()" class="arrow"><</div>
-    <nav class="nav">
-        <a href="#">Home</a>
-        <a href="#">An introduction: Design in 2012</a>
-        <a href="#">Relevant figures in design</a>
-        <a href="#">Where is design heading?</a>
-        <a href="#">Influences</a>
-        <a href="#">Video</a>
-        <a href="#">Sources</a>
-    </nav>
-</div>
-
-<div id="wrapper">
-        <header style="height:50px; background-color:#0097CD;">
-            	<h1 class="sectionHeaderTitle">SOCIAL</h1>      
-                <a href="./index.html"><img id="sectionLogo" src="images/mmclogo-01.png" /></a>
-                <div id="menuButton" onClick="menuOpen()">
-                	<div class="menuButtonDiv"></div>
-                    <div class="menuButtonDivB"></div>
-                </div>
-        </header>
-<div id="subMain">
-
-        <div id="content">
-        
-        <section id="twitter">
-        	<div class="socialContainer">
-        <a class="twitter-timeline" height="100%" href="https://twitter.com/MeharryMedical" data-widget-id="594185497519333376">
-                <div class="spinner">
-  <div class="bounce1"></div>
-  <div class="bounce2"></div>
-  <div class="bounce3"></div>
-</div>
-                </a>
-                </div>
-             
-             
-        </section>
-     	<section id="facebook" class="hidden">
-        <div class="socialContainer" style="text-align:center;">
-        	
-            <div class="fb-page" data-href="https://www.facebook.com/pages/The-Official-Meharry-Medical-College-Alumni-Page/168098117253" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/pages/The-Official-Meharry-Medical-College-Alumni-Page/168098117253"><a href="https://www.facebook.com/pages/The-Official-Meharry-Medical-College-Alumni-Page/168098117253">The Official Meharry Medical College Alumni Page</a></blockquote></div></div>
-            
-            </div>
-        </section>
-        <section id="youtube" class="hidden">
-        	<div class="socialContainer">
-        	<iframe src="http://www.youtube.com/embed/?listType=user_uploads&list=meharrytube" width="480" height="400" frameBorder="0"></iframe>
-            </div>
-        </section>
-        
-        
-        
-        <section id="instagram" class="hidden">
-
-                        <!-- SnapWidget -->
-            <script src="http://snapwidget.com/js/snapwidget.js"></script>
-            <iframe src="http://snapwidget.com/bd/?u=bWVoYXJyeW1lZGljYWxjb2xsZWdlfGlufDIwMHwzfDR8fHllc3wyMHxmYWRlT3V0fG9uU3RhcnR8eWVzfHllcw==&ve=030515" title="Instagram Widget" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%;"></iframe>
-                    </section>
-        
-        
-            
-        </div><!-- content -->
-</div><!-- main -->       
-        <footer class="footerNav">
-        	<nav>
-                <div>
-                	<table width="100%">
-                    <tr>
-                    <td align="center"><img class="socialNav" src="images/White Social Media State-08.png" height="40" onClick="slide('twitter')" /></td>
-                    <td align="center"><img class="socialNav" src="images/White Social Media State-07.png" height="40" onClick="slide('fb')" /></td>
-                    <td align="center"><img class="socialNav" src="images/White Social Media State-01.png" height="40" onClick="slide('instagram')" /></td>
-                    <td align="center"><img class="socialNav" src="images/White Social Media State-09.png" height="40" onClick="slide('youtube')" /></td>
-                    </tr>
-                    </table>
-                </div>
-        	</nav>
-            <div>
-                <img src="images/noc-01.png" width="40px" />
-            </div>
-        </footer>
-
-</div><!-- wrapper -->
-<script>window.twttr = (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0],
-    t = window.twttr || {};
-  if (d.getElementById(id)) return t;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://platform.twitter.com/widgets.js";
-  fjs.parentNode.insertBefore(js, fjs);
- 
-  t._e = [];
-  t.ready = function(f) {
-    t._e.push(f);
-  };
- 
-  return t;
-}(document, "script", "twitter-wjs"));</script>
 </body>
 </html>

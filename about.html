@@ -15,10 +15,19 @@
 
 <body>
 	<div data-role="page" data-control-title="About" data-theme="a" id="about">
+		<div data-role="panel" id="panel" data-position="right" data-display="overlay">
+			<ul data-role="listview">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="social.html">Social</a></li>
+				<li><a href="directory.html">Directory</a></li>
+			</ul>
+		</div>
+	
+	
 	<div data-role="header">
-       	<a href="index.html" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-home">
-       		Home
-       	</a>
+       	<div id="custom-border-radius">
+       		<a href=#panel" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-icon-bars ui-btn-icon-notext ui-corner-all"></a>
+       	</div>
        	<h1>MMC App</h1>
        </div>
       <div data-role="content">
